@@ -1,0 +1,21 @@
+# Python
+backend/.venv/
+backend/__pycache__/
+backend/**/__pycache__/
+backend/*.pyc
+backend/.env
+backend/data/*.sqlite
+backend/data/*.sqlite-*
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# Runtime (make start)
+.run/
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+*.log

@@ -1,0 +1,78 @@
+@import "tailwindcss";
+@source "./**/*.{js,ts,jsx,tsx}";
+@source "../index.html";
+
+@theme {
+  --font-sans: "DM Sans", "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+  --color-ink: #0f172a;
+  --color-panel: #ffffff;
+  --color-muted: #64748b;
+  --color-line: #e2e8f0;
+  --color-accent: #ea580c;
+  --color-accent-soft: #fff7ed;
+  --color-ok: #059669;
+  --color-warn: #d97706;
+  --color-danger: #e11d48;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    color: var(--color-ink);
+    background:
+      radial-gradient(1200px 600px at 10% -10%, #ffedd5 0%, transparent 55%),
+      radial-gradient(900px 500px at 100% 0%, #e0f2fe 0%, transparent 50%),
+      #f8fafc;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .prose-ocr h1,
+  .prose-ocr h2,
+  .prose-ocr h3 {
+    font-weight: 650;
+    margin: 1rem 0 0.5rem;
+    color: #0f172a;
+  }
+
+  .prose-ocr p {
+    margin: 0.5rem 0;
+    line-height: 1.65;
+    color: #334155;
+  }
+
+  .prose-ocr ul,
+  .prose-ocr ol {
+    margin: 0.5rem 0 0.5rem 1.25rem;
+    color: #334155;
+  }
+
+  .prose-ocr table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.75rem 0;
+    font-size: 0.875rem;
+  }
+
+  .prose-ocr th,
+  .prose-ocr td {
+    border: 1px solid #e2e8f0;
+    padding: 0.4rem 0.55rem;
+  }
+
+  .prose-ocr code {
+    background: #f1f5f9;
+    padding: 0.1rem 0.35rem;
+    border-radius: 0.25rem;
+    font-size: 0.85em;
+  }
+}
